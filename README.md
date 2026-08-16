@@ -53,12 +53,22 @@ The application is built with a heavy emphasis on cinematic, high-performance we
 
 ## Previews
 
-You can find high-resolution screenshots of the interface within the `docs/` directory:
-- `docs/hero.png` - The cinematic landing experience
-- `docs/command_center.png` - Personalized user dashboard
-- `docs/interactive_zone.png` - Character chat interface
-- `docs/creation_studio.png` - AI generation suite
-- `docs/arena.png` - Adaptive trivia engine
+You can find high-resolution screenshots of the interface below:
+
+### The Cinematic Landing Experience
+![Hero Landing](docs/hero.png)
+
+### Personalized User Dashboard
+![Command Center](docs/command_center.png)
+
+### Adaptive Trivia Engine
+![Arena Quiz](docs/arena.png)
+
+### Character Chat Interface
+![Interactive Zone](docs/interactive_zone.png)
+
+### AI Generation Suite
+![Creation Studio](docs/creation_studio.png)
 
 ## License
 
