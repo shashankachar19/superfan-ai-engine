@@ -1,0 +1,122 @@
+[
+  {
+    "universe": "one-piece",
+    "title": "The Marineford War",
+    "content": "The Marineford War, also known as the Paramount War, was a massive conflict between the Whitebeard Pirates and the Marines at Marineford. The war began when Portgas D. Ace, the adopted brother of Monkey D. Luffy and the Second Division Commander of the Whitebeard Pirates, was captured by the Marines and sentenced to public execution. Whitebeard, one of the Four Emperors, launched an all-out assault on Marineford to rescue Ace. The battle saw the deaths of both Whitebeard (Edward Newgate) and Ace, profoundly impacting Luffy and the balance of power in the pirate world. It is considered one of the most devastating events in One Piece history.",
+    "tags": ["war", "marineford", "ace", "whitebeard", "luffy", "marines"],
+    "character": "luffy",
+    "content_type": "arc_summary"
+  },
+  {
+    "universe": "one-piece",
+    "title": "Monkey D. Luffy - Character Profile",
+    "content": "Monkey D. Luffy is the captain of the Straw Hat Pirates and one of the most powerful pirates in the world. He ate the Gomu Gomu no Mi (later revealed to be the Hito Hito no Mi, Model: Nika), which gives him a rubbery body. Luffy's dream is to become the King of the Pirates by finding the legendary treasure One Piece, left behind by the previous Pirate King, Gol D. Roger, on the final island Laugh Tale. Luffy is known for his unwavering determination, his love of meat, and his ability to inspire loyalty in others. His bounty has risen dramatically throughout the series, and he is now recognized as one of the Four Emperors of the Sea.",
+    "tags": ["luffy", "straw hat", "captain", "gomu gomu", "nika", "emperor"],
+    "character": "luffy",
+    "content_type": "character_profile"
+  },
+  {
+    "universe": "one-piece",
+    "title": "Roronoa Zoro - Character Profile",
+    "content": "Roronoa Zoro is the combatant and first mate of the Straw Hat Pirates. He is a master swordsman who uses the Three Sword Style (Santoryu), wielding a sword in each hand and one in his mouth. His dream is to become the World's Greatest Swordsman by defeating Dracule Mihawk, the current holder of that title. Zoro is known for his incredible physical strength, endurance, and his hilariously terrible sense of direction. He carries three named swords, including Wado Ichimonji (a memento of his childhood friend Kuina), Enma (formerly wielded by the legendary samurai Kozuki Oden), and Sandai Kitetsu.",
+    "tags": ["zoro", "swordsman", "three sword style", "mihawk", "first mate"],
+    "character": "zoro",
+    "content_type": "character_profile"
+  },
+  {
+    "universe": "one-piece",
+    "title": "The Straw Hat Crew",
+    "content": "The Straw Hat Pirates are the pirate crew led by Monkey D. Luffy. The crew consists of ten members: Luffy (Captain), Roronoa Zoro (Swordsman/First Mate), Nami (Navigator), Usopp (Sniper), Sanji (Cook), Tony Tony Chopper (Doctor), Nico Robin (Archaeologist), Franky (Shipwright), Brook (Musician), and Jinbe (Helmsman). Their ship is the Thousand Sunny, built by Franky. Each crew member has a unique dream they are pursuing, and they are bonded by their deep loyalty to Luffy and to each other.",
+    "tags": ["straw hat", "crew", "nakama", "thousand sunny"],
+    "character": null,
+    "content_type": "group_info"
+  },
+  {
+    "universe": "naruto",
+    "title": "Naruto Uzumaki - Character Profile",
+    "content": "Naruto Uzumaki is a shinobi of Konohagakure's Uzumaki clan. He became the jinchuriki of the Nine-Tails, Kurama, on the day of his birth, a fate that caused him to be ostracized by most of Konoha throughout his childhood. After joining Team 7 and training under Kakashi Hatake, Naruto worked hard to gain the village's acknowledgment while chasing his dream to become Hokage. Through his unwavering determination and belief in others, he eventually became the Seventh Hokage of the Hidden Leaf Village. His signature jutsu is the Rasengan and its variants, and he is known for his Shadow Clone Technique.",
+    "tags": ["naruto", "hokage", "nine tails", "kurama", "rasengan", "hidden leaf"],
+    "character": "naruto",
+    "content_type": "character_profile"
+  },
+  {
+    "universe": "naruto",
+    "title": "The Chunin Exams Arc",
+    "content": "The Chunin Exams arc is one of the most iconic arcs in Naruto. It begins when Team 7 (Naruto, Sasuke, and Sakura) enters the Chunin Exams to advance their ninja rank. The exams consist of three stages: a written test, survival in the Forest of Death, and one-on-one tournament-style battles. The arc introduces many memorable characters including Rock Lee, Gaara, Neji Hyuga, and Orochimaru. The arc culminates in Orochimaru's invasion of Konoha during the finals, the death of the Third Hokage (Hiruzen Sarutobi), and Naruto's epic battle against Gaara.",
+    "tags": ["chunin exams", "sasuke", "sakura", "orochimaru", "gaara", "rock lee"],
+    "character": null,
+    "content_type": "arc_summary"
+  },
+  {
+    "universe": "demon-slayer",
+    "title": "Tanjiro Kamado - Character Profile",
+    "content": "Tanjiro Kamado is a Demon Slayer in the Demon Slayer Corps. After his family was slaughtered by Muzan Kibutsuji and his sister Nezuko was turned into a demon, Tanjiro dedicated his life to finding a cure for Nezuko and avenging his family. He uses Water Breathing and later learns Sun Breathing (Hinokami Kagura), the original and most powerful breathing style. Tanjiro is known for his exceptional sense of smell, his kind heart that extends even to demons, and his Hanafuda earrings which are a family heirloom. He wields a black Nichirin Blade.",
+    "tags": ["tanjiro", "demon slayer", "water breathing", "sun breathing", "nezuko"],
+    "character": "tanjiro",
+    "content_type": "character_profile"
+  },
+  {
+    "universe": "demon-slayer",
+    "title": "The Hashira - Pillars of the Demon Slayer Corps",
+    "content": "The Hashira are the nine strongest swordsmen in the Demon Slayer Corps, serving as its backbone. Each Hashira specializes in a different Breathing Style. The known Hashira include: Giyu Tomioka (Water Hashira), Mitsuri Kanroji (Love Hashira), Obanai Iguro (Serpent Hashira), Sanemi Shinazugawa (Wind Hashira), Gyomei Himejima (Stone Hashira), Muichiro Tokito (Mist Hashira), Shinobu Kocho (Insect Hashira), Tengen Uzui (Sound Hashira), and Kyojuro Rengoku (Flame Hashira). Rengoku's death in the Mugen Train arc deeply impacted Tanjiro and motivated him to grow stronger.",
+    "tags": ["hashira", "pillars", "rengoku", "giyu", "breathing styles"],
+    "character": null,
+    "content_type": "group_info"
+  },
+  {
+    "universe": "marvel",
+    "title": "Spider-Man (Peter Parker) - Character Profile",
+    "content": "Spider-Man, whose real name is Peter Parker, is a superhero from New York City. After being bitten by a radioactive spider, Peter gained superhuman abilities including wall-crawling, enhanced strength and agility, and a precognitive 'spider-sense'. He was mentored by Tony Stark (Iron Man) and eventually became an Avenger. Peter is known for his quick wit, scientific genius, and the principle taught to him by his Uncle Ben: 'With great power comes great responsibility.' In the MCU, he has faced villains including the Vulture, Mysterio, and the Green Goblin across multiple dimensions.",
+    "tags": ["spider-man", "peter parker", "avenger", "iron man", "uncle ben"],
+    "character": "spiderman",
+    "content_type": "character_profile"
+  },
+  {
+    "universe": "harry-potter",
+    "title": "Harry Potter - Character Profile",
+    "content": "Harry James Potter is a half-blood wizard, the only child of James and Lily Potter. He is famous for surviving the Killing Curse cast by Lord Voldemort as an infant, which earned him the title 'The Boy Who Lived'. Harry attended Hogwarts School of Witchcraft and Wizardry, where he was sorted into Gryffindor House. Along with his best friends Ron Weasley and Hermione Granger, Harry faced Voldemort and his Death Eaters multiple times. Harry is a skilled seeker in Quidditch, a natural leader, and the master of the Elder Wand, one of the three Deathly Hallows.",
+    "tags": ["harry", "hogwarts", "gryffindor", "voldemort", "deathly hallows", "chosen one"],
+    "character": "harry",
+    "content_type": "character_profile"
+  },
+  {
+    "universe": "harry-potter",
+    "title": "Hogwarts School of Witchcraft and Wizardry",
+    "content": "Hogwarts is the premier wizarding school in Britain, founded over a thousand years ago by four great witches and wizards: Godric Gryffindor, Helga Hufflepuff, Rowena Ravenclaw, and Salazar Slytherin. Students are sorted into one of the four houses by the Sorting Hat. The school is located in Scotland and features moving staircases, enchanted ceilings, secret passages, and the Room of Requirement. It is protected by powerful magical enchantments and is home to many magical creatures. Albus Dumbledore served as Headmaster during Harry's years at Hogwarts.",
+    "tags": ["hogwarts", "gryffindor", "slytherin", "ravenclaw", "hufflepuff", "dumbledore"],
+    "character": null,
+    "content_type": "location_info"
+  },
+  {
+    "universe": "my-dress-up-darling",
+    "title": "Marin Kitagawa - Character Profile",
+    "content": "Marin Kitagawa is the female protagonist of My Dress-Up Darling (Sono Bisque Doll wa Koi wo Suru). She is a popular, outgoing, and fashion-forward high school student who is passionate about anime, manga, and video games — especially the magical girl series 'Holy Slippery Shiny Girls' (Shiny Tera Girls). Marin dreams of cosplaying her favorite characters and enlists her classmate Wakana Gojo to help her create costumes. Despite her trendy, gyaru-style appearance, she is genuinely kind, nonjudgmental, and deeply enthusiastic about her hobbies. Her bright personality and acceptance of others make her an incredibly endearing character.",
+    "tags": ["marin", "kitagawa", "cosplay", "gyaru", "protagonist"],
+    "character": "marin",
+    "content_type": "character_profile"
+  },
+  {
+    "universe": "my-dress-up-darling",
+    "title": "Wakana Gojo - Character Profile",
+    "content": "Wakana Gojo is the male protagonist of My Dress-Up Darling. He is a quiet, reserved high school student who lives with his grandfather and is training to become a kashirashi — a craftsman who creates traditional Japanese Hina dolls. Gojo is incredibly skilled at sewing, painting, and crafting, talents he applies to creating cosplay costumes for Marin Kitagawa. He is initially shy and socially withdrawn, partly due to a childhood experience where a friend rejected his love of dolls. Through his partnership with Marin, Gojo gradually opens up and gains confidence. His meticulous attention to detail and dedication to his craft make him an exceptional costume maker.",
+    "tags": ["gojo", "wakana", "hina dolls", "craftsman", "sewing", "protagonist"],
+    "character": "gojo",
+    "content_type": "character_profile"
+  },
+  {
+    "universe": "my-dress-up-darling",
+    "title": "My Dress-Up Darling - Series Overview",
+    "content": "My Dress-Up Darling (Japanese: Sono Bisque Doll wa Koi wo Suru) is a romantic comedy manga series written and illustrated by Shinichi Fukuda. It has been serialized in Square Enix's Young Gangan magazine since 2018. The anime adaptation by CloverWorks aired in January 2022 and became a massive hit. The story follows Wakana Gojo, a traditional Hina doll craftsman, and Marin Kitagawa, a popular girl passionate about cosplay. When Marin discovers Gojo's exceptional sewing skills, she asks him to help her make cosplay costumes. Their collaboration leads to a heartwarming romance as they learn to appreciate each other's passions. The series explores themes of self-expression, creativity, acceptance, and the beauty of pursuing one's hobbies without shame.",
+    "tags": ["my dress-up darling", "sono bisque doll", "cosplay", "romance", "cloverworks", "anime"],
+    "character": null,
+    "content_type": "series_overview"
+  },
+  {
+    "universe": "my-dress-up-darling",
+    "title": "Sajuna Inui - Character Profile",
+    "content": "Sajuna Inui is a famous cosplayer known online as 'Juju' who appears as a supporting character in My Dress-Up Darling. Despite her mature and intimidating online persona, she is actually a petite high school student. She initially contacts Gojo to help her with a cosplay costume and eventually becomes friends with Marin. Her younger sister Shinju Inui often assists her with cosplay photography. Sajuna is highly competitive about cosplay quality and is impressed by Gojo's craftsmanship.",
+    "tags": ["sajuna", "juju", "inui", "cosplayer", "supporting character"],
+    "character": "sajuna",
+    "content_type": "character_profile"
+  }
+]
