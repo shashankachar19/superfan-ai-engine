@@ -70,6 +70,3 @@ You can find high-resolution screenshots of the interface below:
 ### AI Generation Suite
 ![Creation Studio](docs/creation_studio.png)
 
-## License
-
-This project is licensed under the MIT License.
