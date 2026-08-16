@@ -123,7 +123,7 @@ export default function CommandCenter({ user, onNavigate }: CommandCenterProps) 
     return () => ctx.revert();
   }, [recommendations]); // Re-run animation when recs load
 
-  const handleMagneticMove = (e: React.MouseEvent<HTMLButtonElement>) => {
+  const handleMagneticMove = (e: React.MouseEvent<HTMLElement>) => {
     const btn = e.currentTarget;
     const inner = btn.querySelector('.magnetic-inner');
     if (!inner) return;
@@ -140,7 +140,7 @@ export default function CommandCenter({ user, onNavigate }: CommandCenterProps) 
     });
   };
 
-  const handleMagneticLeave = (e: React.MouseEvent<HTMLButtonElement>) => {
+  const handleMagneticLeave = (e: React.MouseEvent<HTMLElement>) => {
     const inner = e.currentTarget.querySelector('.magnetic-inner');
     if (inner) {
       gsap.to(inner, {
