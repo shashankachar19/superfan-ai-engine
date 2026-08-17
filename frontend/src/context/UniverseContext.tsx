@@ -24,11 +24,11 @@ export function UniverseProvider({ children }: { children: React.ReactNode }) {
       const data = await ApiClient.getUniverses();
       if (mounted && data && data.length > 0) {
         setUniversesList(data);
-        // Make sure selectedUniverse matches the new data if needed
-        const currentId = selectedUniverse.id;
-        const matching = data.find((u: Universe) => u.id === currentId);
-        if (matching) setSelectedUniverse(matching);
-        else setSelectedUniverse(data[0]);
+        // Make sure selectedUniverse matches the new data if needed without using stale closure
+        setSelectedUniverse(prev => {
+          const matching = data.find((u: Universe) => u.id === prev.id);
+          return matching ? matching : prev;
+        });
       }
       if (mounted) setIsLoading(false);
     };
