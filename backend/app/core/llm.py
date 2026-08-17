@@ -67,7 +67,7 @@ class LLMService:
                     **kwargs
                 )
                 if response and response.choices and len(response.choices) > 0:
-                    return response.choices[0].message.content
+                    return response.choices[0].message.content or ""
                 return ""
             except Exception as e:
                 last_error = e
