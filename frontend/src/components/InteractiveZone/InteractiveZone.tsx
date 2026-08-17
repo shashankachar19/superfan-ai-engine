@@ -117,7 +117,7 @@ export default function InteractiveZone() {
     setResultText("");
     setResultSources([]);
     try {
-      const res = await ApiClient.askFanAssistant(discoverQuery, selectedUniverse.name);
+      const res = await ApiClient.askFanAssistant(discoverQuery);
       setResultText(res.answer);
       setResultSources(res.sources || []);
     } catch (e) {
