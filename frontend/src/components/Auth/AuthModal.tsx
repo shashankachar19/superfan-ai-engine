@@ -60,7 +60,7 @@ export default function AuthModal({ isOpen, onClose, onSuccess }: AuthModalProps
         onSuccess(data.user);
       } else {
         const data: any = await ApiClient.register(username, email, password);
-        onSuccess(data);
+        onSuccess(data.user || data);
       }
       onClose();
     } catch (err: any) {

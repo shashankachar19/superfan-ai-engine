@@ -222,8 +222,8 @@ export class ApiClient {
       try {
         const res = await fetch(`${API_BASE_URL}/auth/register`, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ username, email, password }) });
         if (res.ok) {
-          const data = await res.json();
-          return data;
+          // Auto-login to save token in localStorage and return full session payload
+          return await this.login(email, password);
         }
         throw new Error("Registration failed");
       } catch (e) {

@@ -9,11 +9,11 @@ class Settings(BaseSettings):
     DATABASE_NAME: str = "superfan_ai"
     
     # LLM Models Configuration
-    CHAT_MODEL: str = "gemini/gemini-1.5-flash-latest"
-    CONTENT_MODEL: str = "gemini/gemini-1.5-flash-latest"
-    STORY_MODEL: str = "gemini/gemini-1.5-flash-latest"
-    MEMORY_MODEL: str = "gemini/gemini-1.5-flash-latest"
-    RECOMMENDATION_MODEL: str = "gemini/gemini-1.5-flash-latest"
+    CHAT_MODEL: str = "gemini/gemini-1.5-flash-002"
+    CONTENT_MODEL: str = "gemini/gemini-1.5-flash-002"
+    STORY_MODEL: str = "gemini/gemini-1.5-flash-002"
+    MEMORY_MODEL: str = "gemini/gemini-1.5-flash-002"
+    RECOMMENDATION_MODEL: str = "gemini/gemini-1.5-flash-002"
     
     # API Keys (litellm supports using standard env vars, but we add them here for documentation)
     GEMINI_API_KEY: str = ""

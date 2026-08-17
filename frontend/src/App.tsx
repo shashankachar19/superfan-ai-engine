@@ -66,11 +66,31 @@ export function AppInner() {
   const { selectById } = useUniverse();
 
   const handleLogout = () => {
+    localStorage.removeItem("superfan_token");
+    localStorage.removeItem("superfan_mock_user");
     setIsLoggingOut(true);
     setTimeout(() => {
       window.location.reload();
     }, 2500);
   };
+
+  // Check for existing session on mount
+  useEffect(() => {
+    try {
+      const storedUser = localStorage.getItem("superfan_mock_user");
+      if (storedUser) {
+        const user = JSON.parse(storedUser);
+        setCurrentUser(user);
+        if (!user.favorite_universes || user.favorite_universes.length === 0) {
+          setNeedsOnboarding(true);
+        } else {
+          selectById(user.favorite_universes[0]);
+        }
+      }
+    } catch (e) {
+      console.warn("Failed to load session", e);
+    }
+  }, []);
 
   // Initialize Lenis smooth scroll synced with GSAP
   useEffect(() => {
