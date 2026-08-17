@@ -4,6 +4,7 @@ from typing import Optional, List, Dict, Any
 
 from app.agents.recommendation_agent import RecommendationAgent
 from app.core.config import settings
+from app.core.llm import get_random_gemini_key
 
 router = APIRouter()
 
@@ -12,7 +13,7 @@ _recommendation_agent: Optional[RecommendationAgent] = None
 def get_recommendation_agent() -> RecommendationAgent:
     global _recommendation_agent
     if _recommendation_agent is None:
-        api_key = settings.GEMINI_API_KEY_3 or ""
+        api_key = get_random_gemini_key()
         _recommendation_agent = RecommendationAgent(api_key=api_key if api_key else None)
     return _recommendation_agent
 

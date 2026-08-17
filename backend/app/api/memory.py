@@ -4,6 +4,7 @@ from typing import Optional, List, Dict, Any
 
 from app.agents.memory_agent import MemoryAgent
 from app.core.config import settings
+from app.core.llm import get_random_gemini_key
 from app.core.security import get_current_user
 
 router = APIRouter()
@@ -13,7 +14,7 @@ _memory_agent: Optional[MemoryAgent] = None
 def get_memory_agent() -> MemoryAgent:
     global _memory_agent
     if _memory_agent is None:
-        api_key = settings.GEMINI_API_KEY_4 or ""
+        api_key = get_random_gemini_key()
         _memory_agent = MemoryAgent(api_key=api_key if api_key else None)
     return _memory_agent
 

@@ -4,6 +4,7 @@ from typing import Optional
 
 from app.agents.moderation_agent import ModerationAgent
 from app.core.config import settings
+from app.core.llm import get_random_gemini_key
 
 router = APIRouter()
 
@@ -13,7 +14,7 @@ _moderation_agent: Optional[ModerationAgent] = None
 def get_moderation_agent() -> ModerationAgent:
     global _moderation_agent
     if _moderation_agent is None:
-        api_key = settings.GEMINI_API_KEY_5 or ""
+        api_key = get_random_gemini_key()
         _moderation_agent = ModerationAgent(api_key=api_key if api_key else None)
     return _moderation_agent
 

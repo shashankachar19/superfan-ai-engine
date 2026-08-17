@@ -4,6 +4,7 @@ from typing import Optional, List, Dict, Any
 
 from app.agents.character_agent import CharacterAgent, Message
 from app.core.config import settings
+from app.core.llm import get_random_gemini_key
 from app.core.security import get_current_user
 from app.models.chat_history import ChatHistoryModel
 
@@ -15,7 +16,7 @@ _character_agent: Optional[CharacterAgent] = None
 def get_character_agent() -> CharacterAgent:
     global _character_agent
     if _character_agent is None:
-        api_key = settings.GEMINI_API_KEY_2 or ""
+        api_key = get_random_gemini_key()
         _character_agent = CharacterAgent(api_key=api_key if api_key else None)
     return _character_agent
 

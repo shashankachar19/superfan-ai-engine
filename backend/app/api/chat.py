@@ -5,6 +5,7 @@ from typing import Optional, List, Dict, Any
 from app.agents.fan_assistant import FanAssistantAgent
 from app.rag.embeddings import EmbeddingService
 from app.core.config import settings
+from app.core.llm import get_random_gemini_key
 
 router = APIRouter()
 
@@ -16,7 +17,7 @@ _fan_assistant: Optional[FanAssistantAgent] = None
 def get_embedding_service() -> EmbeddingService:
     global _embedding_service
     if _embedding_service is None:
-        api_key = settings.GEMINI_API_KEY_1 or ""
+        api_key = get_random_gemini_key()
         _embedding_service = EmbeddingService(api_key=api_key if api_key else None)
     return _embedding_service
 
@@ -24,7 +25,7 @@ def get_embedding_service() -> EmbeddingService:
 def get_fan_assistant() -> FanAssistantAgent:
     global _fan_assistant
     if _fan_assistant is None:
-        api_key = settings.GEMINI_API_KEY_1 or ""
+        api_key = get_random_gemini_key()
         _fan_assistant = FanAssistantAgent(
             embedding_service=get_embedding_service(),
             api_key=api_key if api_key else None

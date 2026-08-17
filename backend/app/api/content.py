@@ -4,6 +4,7 @@ from typing import Optional
 
 from app.agents.content_agent import ContentAgent
 from app.core.config import settings
+from app.core.llm import get_random_gemini_key
 
 router = APIRouter()
 
@@ -13,7 +14,7 @@ _content_agent: Optional[ContentAgent] = None
 def get_content_agent() -> ContentAgent:
     global _content_agent
     if _content_agent is None:
-        api_key = settings.GEMINI_API_KEY_3 or ""
+        api_key = get_random_gemini_key()
         _content_agent = ContentAgent(api_key=api_key if api_key else None)
     return _content_agent
 

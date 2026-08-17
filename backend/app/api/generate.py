@@ -5,6 +5,7 @@ import json
 import logging
 from app.core.llm import LLMService
 from app.core.config import settings
+from app.core.llm import get_random_gemini_key
 
 router = APIRouter()
 logger = logging.getLogger(__name__)
