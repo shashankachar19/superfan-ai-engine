@@ -48,7 +48,7 @@ export default function InteractiveZone() {
   const containerRef = useRef<HTMLDivElement>(null);
   const [mode, setMode] = useState<InteractiveMode>("create");
   const [showStoryModal, setShowStoryModal] = useState(false);
-  const [storyPrompt, setStoryPrompt] = useState("");
+
   const [discoverQuery, setDiscoverQuery] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [resultText, setResultText] = useState("");
@@ -110,19 +110,6 @@ export default function InteractiveZone() {
     });
   };
 
-  const handleGenerateStory = async () => {
-    if (!storyPrompt.trim()) return;
-    setIsLoading(true);
-    setResultText("");
-    try {
-      const res = await ApiClient.generateContent(selectedUniverse.name, storyPrompt, "story");
-      setResultText(res.content);
-    } catch (e) {
-      setResultText("Transmission failed. Please try again.");
-    } finally {
-      setIsLoading(false);
-    }
-  };
 
   const handleAskOracle = async () => {
     if (!discoverQuery.trim()) return;

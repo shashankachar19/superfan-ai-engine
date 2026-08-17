@@ -2,7 +2,6 @@ import { useState, useRef, useEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import InteractiveUniverseMap from "../InteractiveUniverseMap/InteractiveUniverseMap";
-import { useUniverse } from "../../context/UniverseContext";
 
 gsap.registerPlugin(ScrollTrigger);
 
