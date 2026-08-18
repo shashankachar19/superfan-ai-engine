@@ -2,7 +2,7 @@ import { universes } from "../data/universes";
 import { getUniverseById } from "../data/universes";
 import { getCharactersByUniverse } from "../data/characters";
 
-const API_BASE_URL = "http://localhost:8000/api/v1";
+const API_BASE_URL = "https://superfan-backend-1bmb.onrender.com";
 
 // Helper for timeout
 const fetchWithTimeout = async (resource: string, options: RequestInit & { timeout?: number } = {}) => {
@@ -52,16 +52,16 @@ const MOCK_KNOWLEDGE: Record<string, Record<string, string>> = {
 function mockRagSearch(query: string, universe?: string): { answer: string; sources: Array<{ title: string; universe: string }> } {
   const queryLower = query.toLowerCase();
   const searchUniverse = universe || "";
-  
+
   // Search in specific universe first, then globally
-  const universesToSearch = searchUniverse 
-    ? [searchUniverse] 
+  const universesToSearch = searchUniverse
+    ? [searchUniverse]
     : Object.keys(MOCK_KNOWLEDGE);
-  
+
   for (const uId of universesToSearch) {
     const kb = MOCK_KNOWLEDGE[uId];
     if (!kb) continue;
-    
+
     for (const [key, value] of Object.entries(kb)) {
       if (key === "default") continue;
       if (queryLower.includes(key)) {
@@ -72,7 +72,7 @@ function mockRagSearch(query: string, universe?: string): { answer: string; sour
       }
     }
   }
-  
+
   // Fallback to universe default or generic
   if (searchUniverse && MOCK_KNOWLEDGE[searchUniverse]) {
     return {
@@ -80,7 +80,7 @@ function mockRagSearch(query: string, universe?: string): { answer: string; sour
       sources: [{ title: `${searchUniverse} Overview`, universe: searchUniverse }],
     };
   }
-  
+
   return {
     answer: "Great question! I'm your Fan Assistant and I'd love to help. Try asking about specific characters like Luffy, Naruto, Tanjiro, Spider-Man, or Harry Potter. You can also ask about story arcs like the Marineford War or the Chunin Exams!",
     sources: [],
@@ -127,9 +127,9 @@ export class ApiClient {
   }
 
   static async checkBackend(): Promise<boolean> {
-    if (this._isBackendAvailable !== null) return this._isBackendAvailable;
+    if (this._isBackendAvailable === true) return true;
     try {
-      const res = await fetchWithTimeout(`${API_BASE_URL}/health`, { timeout: 1000 });
+      const res = await fetchWithTimeout(`${API_BASE_URL}/health`, { timeout: 2000 });
       this._isBackendAvailable = res.ok;
       return res.ok;
     } catch {
@@ -143,8 +143,8 @@ export class ApiClient {
   static async getUniverses() {
     const isAvailable = await this.checkBackend();
     if (isAvailable) {
-      try { 
-        const res = await fetch(`${API_BASE_URL}/universes/`); 
+      try {
+        const res = await fetch(`${API_BASE_URL}/universes/`);
         if (res.ok) {
           const data = await res.json();
           if (data && data.length > 0) return data;
@@ -186,8 +186,8 @@ export class ApiClient {
   static async getCharactersByUniverse(universeId: string) {
     const isAvailable = await this.checkBackend();
     if (isAvailable) {
-      try { 
-        const res = await fetch(`${API_BASE_URL}/universes/${universeId}/characters`); 
+      try {
+        const res = await fetch(`${API_BASE_URL}/universes/${universeId}/characters`);
         if (res.ok) {
           const data = await res.json();
           if (data && data.length > 0) return data;
@@ -268,7 +268,7 @@ export class ApiClient {
         console.error("Fan Assistant API failed:", e);
       }
     }
-    
+
     // Fallback: use mock RAG search
     return new Promise((resolve) => {
       setTimeout(() => resolve(mockRagSearch(query, universe)), 800);
@@ -276,7 +276,7 @@ export class ApiClient {
   }
 
   // --- CHARACTER AI ---
-  static async chatWithCharacter(characterName: string, universeName: string, message: string, history: Array<{role: string, content: string}>): Promise<{ response: string; character_name: string }> {
+  static async chatWithCharacter(characterName: string, universeName: string, message: string, history: Array<{ role: string, content: string }>): Promise<{ response: string; character_name: string }> {
     const isAvailable = await this.checkBackend();
     if (isAvailable) {
       try {
@@ -290,7 +290,7 @@ export class ApiClient {
         console.error("Character Chat API failed:", e);
       }
     }
-    
+
     // Fallback Mock Logic
     return new Promise((resolve) => {
       setTimeout(() => {
@@ -321,13 +321,13 @@ export class ApiClient {
     try {
       const stored = localStorage.getItem(`superfan_chat_${characterId}`);
       if (stored) return JSON.parse(stored);
-    } catch {}
+    } catch { }
     return [];
   }
 
   static async saveChatHistory(characterId: string, messages: any[]): Promise<boolean> {
     const isAvailable = await this.checkBackend();
-    
+
     // Always save to partitioned local storage as backup
     localStorage.setItem(`superfan_chat_${characterId}`, JSON.stringify(messages));
 
@@ -336,7 +336,7 @@ export class ApiClient {
         const token = this.getAuthToken();
         const res = await fetch(`${API_BASE_URL}/characters/history/${characterId}`, {
           method: "POST",
-          headers: { 
+          headers: {
             "Content-Type": "application/json",
             "Authorization": `Bearer ${token}`
           },
@@ -365,16 +365,16 @@ export class ApiClient {
         console.error("Content Generation API failed:", e);
       }
     }
-    
+
     // Fallback Mock Logic
     return new Promise((resolve) => {
       setTimeout(() => {
         let fallbackResponse = `This is a generated ${type.replace('_', ' ')} set in the ${universeName} universe.\n\nThe prompt was: '${prompt}'.\n\n(Note: The AI generator is currently offline. This is a fallback response. When the AI is active, it will generate a dynamic, high-quality response tailored to your exact prompt.)`;
-        
+
         let image_url = undefined;
         if (type === "wallpaper_description" || type === "poster_tagline") {
-           const sanitized_prompt = `${universeName} ${prompt}`.replace(/ /g, "%20");
-           image_url = `https://image.pollinations.ai/prompt/${sanitized_prompt}?width=1024&height=1024&nologo=true`;
+          const sanitized_prompt = `${universeName} ${prompt}`.replace(/ /g, "%20");
+          image_url = `https://image.pollinations.ai/prompt/${sanitized_prompt}?width=1024&height=1024&nologo=true`;
         }
 
         resolve({ content: fallbackResponse, universe_name: universeName, image_url });
@@ -397,7 +397,7 @@ export class ApiClient {
         console.error("Quiz Generation API failed:", e);
       }
     }
-    
+
     // Fallback Mock Logic
     return new Promise((resolve) => {
       setTimeout(() => {
@@ -442,14 +442,14 @@ export class ApiClient {
         console.error("Community API failed:", e);
       }
     }
-    
+
     // Fallback Mock Logic
     return new Promise((resolve) => {
       setTimeout(() => {
         const contentLower = content.toLowerCase();
         const badWords = ["hate", "stupid", "idiot", "kill", "ugly"];
         const spoilerWords = ["dies", "death", "spoiler", "ending"];
-        
+
         if (badWords.some(word => contentLower.includes(word))) {
           resolve({
             accepted: false,
@@ -457,7 +457,7 @@ export class ApiClient {
           });
           return;
         }
-        
+
         if (spoilerWords.some(word => contentLower.includes(word)) && !contentLower.includes("warning")) {
           resolve({
             accepted: false,
@@ -465,7 +465,7 @@ export class ApiClient {
           });
           return;
         }
-        
+
         resolve({
           accepted: true,
           reason: "Post accepted! Thank you for contributing to the community.",
