@@ -2,7 +2,7 @@ import { universes } from "../data/universes";
 import { getUniverseById } from "../data/universes";
 import { getCharactersByUniverse } from "../data/characters";
 
-const API_BASE_URL = "https://superfan-backend-1bmb.onrender.com";
+const API_BASE_URL = "https://superfan-backend-1bmb.onrender.com/api/v1";
 
 // Helper for timeout
 const fetchWithTimeout = async (resource: string, options: RequestInit & { timeout?: number } = {}) => {
